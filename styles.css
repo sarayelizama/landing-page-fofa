@@ -43,5 +43,47 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--accent)
+  color: var(--accent);
+  text-decoration: none;
+  padding-left: 2.5rem ;
+}
+
+-nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* hero section styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 12% 5%;
+  background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%)
 }
